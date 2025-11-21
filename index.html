@@ -1,0 +1,1734 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expansão para o mercado hispano em 90 dias | RedattoLAB</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --azul-petroleo: #084d6e;
+            --azul-escuro: #0A1929;
+            --preto: #0A1929;
+            --dourado: #daa520;
+            --areia: #f5f5dc;
+            --verde-agua: #7dd3c0;
+            --cinza-medio: #2a2a2a;
+        }
+
+        @page {
+            size: A4 portrait;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--preto);
+            background: #e0e0e0;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+            padding: 10mm 0;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm 20mm 25mm 20mm;
+            margin: 0 auto 10mm;
+            background: white;
+            position: relative;
+            page-break-after: always;
+            box-shadow: 0 0 10mm rgba(0,0,0,0.3);
+        }
+
+        .page:last-child {
+            page-break-after: auto;
+            margin-bottom: 0;
+        }
+
+        /* Capa */
+        .cover {
+            background: linear-gradient(135deg, var(--azul-escuro) 0%, var(--azul-petroleo) 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 30mm 20mm;
+        }
+
+        .cover-logo {
+            width: 180px;
+            height: auto;
+        }
+
+        .cover-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 36pt;
+            font-weight: 800;
+            color: var(--dourado);
+            line-height: 1.2;
+            margin: 40mm 0 20mm;
+        }
+
+        .cover-subtitle {
+            font-size: 16pt;
+            color: var(--areia);
+            margin-bottom: 30mm;
+            line-height: 1.5;
+        }
+
+        .cover-footer {
+            border-top: 2px solid var(--dourado);
+            padding-top: 15px;
+            font-size: 11pt;
+            color: var(--verde-agua);
+        }
+
+        /* Tipografia */
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22pt;
+            color: var(--dourado);
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--dourado);
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 18pt;
+            color: var(--azul-petroleo);
+            margin-top: 18px;
+            margin-bottom: 12px;
+        }
+
+        h3 {
+            font-size: 14pt;
+            color: var(--azul-escuro);
+            margin-top: 15px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        h4 {
+            font-size: 11pt;
+            color: var(--azul-petroleo);
+            margin-top: 10px;
+            margin-bottom: 7px;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 10px;
+            text-align: justify;
+            font-size: 10.5pt;
+            line-height: 1.5;
+        }
+
+        strong {
+            color: var(--azul-petroleo);
+            font-weight: 700;
+        }
+
+        /* Box Você Sabia */
+        .info-box {
+            background: linear-gradient(135deg, rgba(125, 211, 192, 0.1), rgba(218, 165, 32, 0.1));
+            border-left: 4px solid var(--dourado);
+            padding: 10px 12px;
+            margin: 12px 0;
+            border-radius: 4px;
+        }
+
+        .info-box h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--dourado);
+            font-size: 11pt;
+            margin-bottom: 6px;
+        }
+
+        .info-box p {
+            margin-bottom: 5px;
+            font-size: 9pt;
+        }
+
+        /* Listas */
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 12px;
+        }
+
+        li {
+            margin-bottom: 6px;
+            font-size: 10.5pt;
+            line-height: 1.5;
+        }
+
+        /* Tabelas */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 9.5pt;
+        }
+
+        th {
+            background: var(--azul-petroleo);
+            color: white;
+            padding: 10px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 8px 10px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:nth-child(even) {
+            background: rgba(125, 211, 192, 0.05);
+        }
+
+        /* Timeline */
+        .timeline {
+            margin: 18px 0;
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 15px;
+            align-items: flex-start;
+        }
+
+        .timeline-number {
+            background: var(--dourado);
+            color: var(--preto);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14pt;
+            flex-shrink: 0;
+            margin-right: 12px;
+        }
+
+        .timeline-content h4 {
+            color: var(--azul-petroleo);
+            font-size: 11pt;
+            margin-bottom: 6px;
+        }
+
+        .timeline-content p {
+            font-size: 9.5pt;
+            margin-bottom: 4px;
+        }
+
+        /* Checklist */
+        .checklist {
+            background: rgba(218, 165, 32, 0.05);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 8px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(218, 165, 32, 0.2);
+        }
+
+        .checklist-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .checkbox {
+            width: 15px;
+            height: 15px;
+            border: 2px solid var(--dourado);
+            border-radius: 3px;
+            margin-right: 10px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .checklist-item span {
+            font-size: 9.5pt;
+        }
+
+        /* Estatísticas */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, var(--azul-escuro), var(--azul-petroleo));
+            color: white;
+            padding: 12px;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 20pt;
+            font-weight: 700;
+            color: var(--dourado);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 9pt;
+            color: var(--verde-agua);
+        }
+
+        /* Footer */
+        .page-footer {
+            position: absolute;
+            bottom: 15mm;
+            left: 20mm;
+            right: 20mm;
+            padding-top: 8px;
+            border-top: 1px solid #e0e0e0;
+            font-size: 9pt;
+            color: #666;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Ícones de Nicho */
+        .niche-icon {
+            font-size: 24pt;
+            display: inline-block;
+            margin-right: 12px;
+        }
+
+        .niche-section {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(125, 211, 192, 0.05);
+            border-radius: 10px;
+        }
+
+        .niche-section h2 {
+            margin-top: 0;
+            font-size: 16pt;
+        }
+
+        .niche-section h3 {
+            font-size: 12pt;
+            margin-top: 12px;
+        }
+
+        /* Print Optimization */
+        @media print {
+            body {
+                width: 210mm;
+                padding: 0;
+            }
+
+            .page {
+                margin: 0;
+                border: none;
+                box-shadow: none;
+            }
+        }
+
+        /* Gradientes de Seção */
+        .section-divider {
+            height: 3px;
+            background: linear-gradient(90deg, var(--verde-agua), var(--dourado));
+            margin: 20px 0;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <!-- CAPA -->
+    <div class="page cover">
+        <div>
+            <img src="https://i.ibb.co/jPWZ01JV/Redatto-LAB-400-x-150-px.png" alt="RedattoLAB" class="cover-logo">
+        </div>
+        
+        <div>
+            <h1 class="cover-title">Expansão para o mercado hispano em 90 dias</h1>
+            <p class="cover-subtitle">
+                Guia estratégico completo para empresas brasileiras de tecnologia, SaaS e alto ticket conquistarem 400 milhões de hispanofalantes
+            </p>
+        </div>
+        
+        <div class="cover-footer">
+            <div>© 2025 RedattoLAB | Todos os direitos reservados</div>
+            <div>www.redattolab.com.br</div>
+        </div>
+    </div>
+
+    <!-- PÁGINA 2: INTRODUÇÃO -->
+    <div class="page">
+        <h1>1. O potencial do mercado hispano</h1>
+        
+        <p>O mercado hispanofalante representa uma das oportunidades mais promissoras para empresas brasileiras em 2025. Com <strong>400 milhões de pessoas</strong> falando espanhol como língua nativa, este mercado oferece um potencial de crescimento exponencial para negócios que buscam internacionalização estratégica.</p>
+
+        <div class="info-box">
+            <h4>💡 Você sabia?</h4>
+            <p>O espanhol é a segunda língua mais falada no mundo por número de nativos, ficando atrás apenas do mandarim. No contexto empresarial, é a terceira língua mais utilizada na internet e em negócios internacionais.</p>
+        </div>
+
+        <h2>Por que o mercado hispano?</h2>
+        
+        <p>A América Latina está passando por uma <strong>transformação digital sem precedentes</strong>. O mercado de Software como Serviço (SaaS) na região deve saltar de US$ 22 bilhões em 2023 para <strong>US$ 46 bilhões até 2027</strong>, mais que dobrando em apenas quatro anos, segundo dados do EBANX e PCMI.</p>
+
+        <p>Este crescimento de <strong>23% ao ano</strong> coloca a América Latina como a região de maior expansão no setor globalmente, superando Europa (19%), América do Norte (17%) e Ásia (16%).</p>
+
+        <h2>O momento é agora</h2>
+        
+        <p>Três fatores convergem para criar a janela de oportunidade perfeita:</p>
+
+        <ul>
+            <li><strong>Digitalização acelerada:</strong> a pandemia acelerou em 5 anos a adoção de tecnologias digitais na região</li>
+            <li><strong>Crescimento econômico:</strong> Argentina projeta crescimento de 5,5% do PIB em 2025, enquanto Paraguai deve crescer 4%</li>
+            <li><strong>Baixa concorrência:</strong> enquanto o mercado brasileiro está saturado, países hispanos ainda têm espaço para novos players de qualidade</li>
+        </ul>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-number">400M</span>
+                <span class="stat-label">Hispanofalantes no mundo</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">US$ 46B</span>
+                <span class="stat-label">Mercado SaaS LATAM 2027</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">23%</span>
+                <span class="stat-label">Crescimento anual do setor</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">5,5%</span>
+                <span class="stat-label">Crescimento PIB Argentina</span>
+            </div>
+        </div>
+
+        <div class="page-footer">
+            <span>RedattoLAB - Expansão hispana em 90 dias</span>
+            <span>Página 2</span>
+        </div>
+    </div>
+
+    <!-- PÁGINA 3: POR QUE EXPANDIR AGORA -->
+    <div class="page">
+        <h1>2. Por que expandir agora? Dados e tendências</h1>
+        
+        <h2>O boom do mercado digital latino-americano</h2>
+        
+        <p>O mercado latino-americano de tecnologia está vivendo um momento único. Os investimentos em TI na região devem alcançar <strong>US$ 102,7 bilhões em 2025</strong>, com o Brasil liderando com 34,7% deste total.</p>
+
+        <p>O Brasil consolidou-se como o <strong>maior player de TI da América Latina</strong>, respondendo por mais de um terço dos investimentos regionais. Com crescimento de 13,9% em 2024 (superando a média global de 10,8%), o país mantém a 10ª posição no ranking mundial de investimentos em TI.</p>
+
+        <div class="info-box">
+            <h4>💡 Você sabia?</h4>
+            <p>O Pix, sistema brasileiro de pagamentos instantâneos, já representa 61% da receita das empresas de SaaS que operam no Brasil através do EBANX. O lançamento do Pix Automático em junho de 2025 promete impulsionar ainda mais os serviços por assinatura.</p>
+        </div>
+
+        <h2>Argentina: o milagre econômico de 2025</h2>
+        
+        <p>A Argentina emerge como destaque absoluto na América Latina. Após anos de instabilidade, o país projeta um <strong>crescimento do PIB de 5,5% em 2025</strong>, segundo o FMI, o segundo maior entre as 25 principais economias mundiais, ficando atrás apenas da Índia (6,4%).</p>
+
+        <p>Este crescimento é impulsionado por:</p>
+        <ul>
+            <li>Recuperação nos salários reais e gastos das famílias</li>
+            <li>Melhores condições de financiamento fortalecendo investimento privado</li>
+            <li>Processo de desinflação bem-sucedido (de 25% ao mês para 2,4% mensais)</li>
+            <li>Estabilidade cambial e ajuste fiscal estrutural</li>
+        </ul>
+
+        <h2>Paraguai: o mercado promissor</h2>
+        
+        <p>O Paraguai projeta crescimento do PIB de <strong>4% em 2025</strong>, quase o dobro da previsão brasileira (2,2%). O país adota o modelo tributário "10-10-10" (10% de imposto corporativo, 10% de imposto de renda pessoal e 10% de IVA), resultando na menor carga tributária da América do Sul.</p>
+
+        <p>Com quase <strong>US$ 10 bilhões em investimento estrangeiro em 2024</strong> (4,1% a mais que 2023), o Paraguai atrai empresas brasileiras como a Lupo, que podem reduzir custos operacionais em até 40%.</p>
+
+        <div class="page-footer">
+            <span>RedattoLAB - Expansão hispana em 90 dias</span>
+            <span>Página 3</span>
+        </div>
+    </div>
+
+    <!-- PÁGINA 4: TENDÊNCIAS E PREPARAÇÃO -->
+    <div class="page">
+        <h2>Tendências de pagamento digital</h2>
+        
+        <p>As <strong>carteiras digitais</strong> estão revolucionando os pagamentos na região. Na América Latina, este método saltou de 25% do mercado em 2024 para uma projeção de <strong>39% até 2030</strong>, consolidando-se como principal meio de pagamento.</p>
+
+        <p>O número de usuários de carteiras digitais deve crescer de 4,5 bilhões globalmente para <strong>6 bilhões até 2030</strong>, um crescimento de 70%. A Geração Z lidera esta adoção, com 80% utilizando carteiras digitais regularmente.</p>
+
+        <div class="section-divider"></div>
+
+        <h1>3. Preparação estratégica (semanas 1-4)</h1>
+        
+        <p>As primeiras quatro semanas são cruciais para estabelecer uma base sólida. Esta fase determina o sucesso ou fracasso de toda a operação.</p>
+
+        <h2>Semana 1: análise de mercado e definição de países-alvo</h2>
+        
+        <h3>Pesquisa de mercado profunda</h3>
+        <ul>
+            <li>Analise dados econômicos atualizados de cada país hispano potencial</li>
+            <li>Identifique concorrentes diretos e indiretos em cada mercado</li>
+            <li>Mapeie regulamentações específicas do seu setor</li>
+            <li>Avalie barreiras de entrada e facilitadores locais</li>
+        </ul>
+
+        <h3>Definição de países prioritários</h3>
+        <p>Para produtos SaaS e tecnologia, recomendamos priorizar nesta ordem:</p>
+        
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-number">1</div>
+                <div class="timeline-content">
+                    <h4>Argentina</h4>
+                    <p>Maior mercado hispano da região, em forte recuperação econômica. População de 46 milhões, alta digitalização, crescimento de 5,5% do PIB.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-number">2</div>
+                <div class="timeline-content">
+                    <h4>México</h4>
+                    <p>130 milhões de habitantes, proximidade com EUA, mercado de TI de US$ 125,7 bilhões. Carteiras digitais devem liderar pagamentos até 2027.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-number">3</div>
+                <div class="timeline-content">
+                    <h4>Colômbia</h4>
+                    <p>51 milhões de habitantes, mercado digital de US$ 61,4 bilhões, forte adoção de fintechs. Nequi (carteira digital) com 54% de penetração.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-number">4</div>
+                <div class="timeline-content">
+                    <h4>Chile</h4>
+                    <p>19 milhões de habitantes, maior inclusão financeira da região (39% usam débito). Mercado digital de US$ 39,1 bilhões.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-footer">
+            <span>RedattoLAB - Expansão hispana em 90 dias</span>
+            <span>Página 4</span>
+        </div>
+    </div>
+
+    <!-- PÁGINA 5: PERSONAS E ANÁLISE COMPETITIVA -->
+    <div class="page">
+        <div class="info-box">
+            <h4>💡 Dica estratégica</h4>
+            <p>Comece com 1-2 países no primeiro ano. A expansão prematura para múltiplos mercados simultâneos é o erro nº 1 de empresas brasileiras. Domine um mercado antes de escalar para o próximo.</p>
+        </div>
+
+        <h2>Semana 2: definição de personas hispanas</h2>
+        
+        <p>As personas hispanas <strong>não são traduções</strong> das brasileiras. Diferenças culturais significativas exigem adaptação:</p>
+
+        <h3>Diferenças culturais críticas</h3>
+        <ul>
+            <li><strong>Comunicação:</strong> hispanos preferem tom mais formal em B2B, mas caloroso em B2C</li>
+            <li><strong>Decisão de compra:</strong> processo mais consultivo, envolvendo mais stakeholders</li>
+            <li><strong>Confiança:</strong> relacionamento precede transação - networking é fundamental</li>
+            <li><strong>Negociação:</strong> esperada em praticamente todas as transações B2B</li>
+        </ul>
+
+        <h2>Semana 3: análise competitiva regional</h2>
+        
+        <p>Mapeie seus concorrentes em cada país-alvo:</p>
+        
+        <ul>
+            <li>Identifique os 3-5 principais players locais</li>
+            <li>Analise estratégias de pricing (comum praticar preços 20-30% menores que no Brasil)</li>
+            <li>Estude posicionamento de marca e messaging</li>
+            <li>Avalie presença digital e canais de aquisição</li>
+            <li>Documente pontos fortes e fracos de cada competidor</li>
+        </ul>
+
+        <h2>Semana 4: posicionamento e proposta de valor</h2>
+        
+        <p>Defina seu <strong>posicionamento único</strong> para o mercado hispano:</p>
+
+        <h3>Elementos do posicionamento</h3>
+        <ul>
+            <li>Por que um cliente hispano escolheria você vs. um competidor local?</li>
+            <li>Qual é sua expertise brasileira que traz valor único?</li>
+            <li>Como você se diferencia em qualidade, preço, suporte ou inovação?</li>
+            <li>Que garantias ou diferenciais você pode oferecer?</li>
+        </ul>
+
+        <div class="info-box">
+            <h4>💡 Erro comum a evitar</h4>
+            <p>Nunca posicione seu produto apenas como "versão mais barata" de soluções internacionais. Hispanos valorizam qualidade e estão dispostos a pagar por valor real. Posicione-se pela qualidade e diferenciação, não apenas por preço.</p>
+        </div>
+
+        <div class="page-footer">
+            <span>RedattoLAB - Expansão hispana em 90 dias</span>
+            <span>Página 5</span>
+        </div>
+    </div>
+
+    <!-- PÁGINA 6: ESTRUTURAÇÃO LEGAL -->
+    <div class="page">
+        <h1>4. Estruturação legal e tributária (semanas 5-8)</h1>
+        
+        <p>A estruturação legal adequada evita problemas futuros e otimiza custos. Esta fase requer atenção especial.</p>
+
+        <h2>Semana 5: modelo de operação</h2>
+        
+        <p>Defina como sua empresa vai operar no mercado hispano:</p>
+
+        <h3>Opção 1: venda remota (recomendada para início)</h3>
+        <ul>
+            <li><strong>Vantagens:</strong> menor custo inicial, maior agilidade, sem estrutura física</li>
+            <li><strong>Desvantagens:</strong> limitações tributárias em alguns países, menor presença local</li>
+            <li><strong>Ideal para:</strong> SaaS, serviços digitais, produtos com baixo ticket</li>
+        </ul>
+
+        <h3>Opção 2: empresa local</h3>
+        <ul>
+            <li><strong>Vantagens:</strong> presença oficial, acesso a licitações, melhor posicionamento</li>
+            <li><strong>Desvantagens:</strong> custo alto (US$ 5-15k setup), burocracia, manutenção mensal</li>
+            <li><strong>Ideal para:</strong> alto ticket (>US$ 50k/ano), vendas B2B complexas, contratos governamentais</li>
+        </ul>
+
+        <h3>Opção 3: parceiro local</h3>
+        <ul>
+            <li><strong>Vantagens:</strong> acesso rápido ao mercado, conhecimento local, rede de contatos</li>
+            <li><strong>Desvantagens:</strong> divisão de receita (típico 30-50%), menor controle</li>
+            <li><strong>Ideal para:</strong> teste de mercado, produtos que exigem suporte local intenso</li>
+        </ul>
+
+        <h2>Semanas 6-7: estrutura tributária e compliance</h2>
+        
+        <p>A tributação varia significativamente entre países hispanos. Entender essas diferenças é crucial para precificação e viabilidade.</p>
+
+        <h3>Comparação tributária: principais mercados</h3>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>País</th>
+                    <th>Imposto corporativo</th>
+                    <th>IVA</th>
+                    <th>Facilidade de negócios</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Brasil</strong></td>
+                    <td>34% (federal)</td>
+                    <td>17-20%</td>
+                    <td>Ranking 124º</td>
+                </tr>
+                <tr>
+                    <td><strong>Argentina</strong></td>
+                    <td>25-35%</td>
+                    <td>21%</td>
+                    <td>Ranking 126º</td>
+                </tr>
+                <tr>
+                    <td><strong>México</strong></td>
+                    <td>30%</td>
+                    <td>16%</td>
+                    <td>Ranking 60º</td>
+                </tr>
+                <tr>
+                    <td><strong>Chile</strong></td>
+                    <td>27%</td>
+                    <td>19%</td>
+                    <td>Ranking 59º</td>
+                </tr>
+                <tr>
+                    <td><strong>Colômbia</strong></td>
+                    <td>35%</td>
+                    <td>19%</td>
+                    <td>Ranking 67º</td>
+                </tr>
+                <tr>
+                    <td><strong>Paraguai</strong></td>
+                    <td>10%</td>
+                    <td>10%</td>
+                    <td>Ranking 113º</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="page-footer">
+            <span>RedattoLAB - Expansão hispana em 90 dias</span>
+            <span>Página 6</span>
+        </div>
+    </div>
+
+    <!-- PÁGINA 7: CONTRATOS E DOCUMENTAÇÃO -->
+    <div class="page">
+        <div class="info-box">
+            <h4>💡 Destaque Paraguai</h4>
+            <p>O Paraguai oferece o modelo "10-10-10" mais competitivo da região: 10% de imposto corporativo, 10% de imposto de renda pessoal e 10% de IVA. Ideal para estruturação de holding ou subsidiária regional para otimização tributária legal.</p>
+        </div>
+
+        <h2>Semana 8: contratos e documentação legal</h2>
+        
+        <h3>Documentos essenciais</h3>
+        <ul>
+            <li><strong>Termos de serviço:</strong> adaptados à legislação de cada país</li>
+            <li><strong>Política de privacidade:</strong> conforme GDPR e leis locais (Argentina tem lei similar)</li>
+            <li><strong>SLA (Service Level Agreement):</strong> especialmente importante para B2B</li>
+            <li><strong>Contratos de parceria:</strong> se aplicável, com distribuidores ou revendedores</li>
+            <li><strong>Política de reembolso:</strong> clara e alinhada com proteção ao consumidor local</li>
+        </ul>
+
+        <h3>Recomendações jurídicas</h3>
+        <ul>
+            <li>Contrate advogado local para revisão de documentos (custo: US$ 500-2.000)</li>
+            <li>Use plataformas como LegalZoom ou Rocket Lawyer para templates iniciais</li>
+            <li>Considere seguro de responsabilidade civil para serviços digitais</li>
+            <li>Registre sua marca em cada país-alvo (custo: US$ 300-800 por país)</li>
+        </ul>
+
+        <div class="page-footer">
+            <span>RedattoLAB - Expansão hispana em 90 dias</span>
+            <span>Página 7</span>
+        </div>
+    </div>
+
+    <!-- PÁGINA 8: INFRAESTRUTURA FINANCEIRA -->
+    <div class="page">
+        <h1>5. Infraestrutura financeira e operacional (semanas 9-10)</h1>
+        
+        <h2>Semana 9: sistema de pagamentos</h2>
+        
+        <p>A escolha correta de processadores de pagamento é crítica para conversão e experiência do cliente.</p>
+
+        <h3>Processadores recomendados para América Latina</h3>
+        
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-number">1</div>
+                <div class="timeline-content">
+                    <h4>EBANX</h4>
+                    <p><strong>Melhor para:</strong> SaaS e serviços digitais. Aceita Pix (61% da receita), carteiras digitais locais, cartões. Taxa: 4,99% + R$ 0,40 por transação. Líder absoluto em pagamentos para SaaS na LATAM.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-number">2</div>
+                <div class="timeline-content">
+                    <h4>Mercado Pago</h4>
+                    <p><strong>Melhor para:</strong> Argentina, México, Brasil. 78,5 milhões de usuários. Taxa: 3,99-5,99%. Forte presença em e-commerce e varejo digital.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-number">3</div>
+                <div class="timeline-content">
+                    <h4>Stripe</h4>
+                    <p><strong>Melhor para:</strong> operação global padronizada. Aceito em 46 países. Taxa: 2,9% + US$ 0,30. Ideal para quem já usa no Brasil e quer consistência.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-number">4</div>
+                <div class="timeline-content">
+                    <h4>PayU</h4>
+                    <p><strong>Melhor para:</strong> Colômbia e Peru. Forte em métodos locais como PSE (Colômbia) e SafetyPay. Taxa: 3,49-4,99%.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h4>💡 Estratégia de pagamento</h4>
+            <p>Ofereça <strong>múltiplos métodos de pagamento</strong>. Empresas que aceitam carteiras digitais + cartões + métodos locais têm taxa de conversão 47% maior que aquelas que aceitam apenas cartões internacionais.</p>
+        </div>
+
+        <h3>Métodos de pagamento locais essenciais</h3>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>País</th>
+                    <th>Método principal</th>
+                    <th>Penetração</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Argentina</strong></td>
+                    <td>Mercado Pago</td>
+                    <td>67% dos pagamentos digitais</td>
+                </tr>
+                <tr>
+                    <td><strong>México</strong></td>
+                    <td>OXXO (dinheiro)</td>
+                    <td>41% da população sem banco</td>
+                </tr>
+                <tr>
+                    <td><strong>Chile</strong></td>
+                    <td>Débito bancário</td>
+                    <td>39% preferem débito</td>
+                </tr>
+                <tr>
+                    <td><strong>Colômbia</strong></td>
+                    <td>Nequi</td>
+                    <td>54% dos adultos usam</td>
+                </tr>
+                <tr>
+                    <td><strong>Brasil</strong></td>
+                    <td>Pix</td>
+                    <td>61% da receita SaaS</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="page-footer">
+            <span>RedattoLAB - Expansão hispana em 90 dias</span>
+            <span>Página 8</span>
+        </div>
+    </div>
+
+    <!-- PÁGINA 9: ATENDIMENTO E SUPORTE -->
+    <div class="page">
+        <h2>Semana 10: atendimento e suporte</h2>
+        
+        <p>O atendimento em espanhol nativo é <strong>não negociável</strong>. Clientes hispanos abandonam serviços com suporte apenas em português.</p>
+
+        <h3>Estrutura de atendimento recomendada</h3>
+
+        <h4>Fase 1: lançamento (primeiros 3 meses)</h4>
+        <ul>
+            <li><strong>Chatbot IA bilíngue:</strong> responde 70-80% das dúvidas básicas (setup: US$ 200-500)</li>
+            <li><strong>1 atendente bilíngue:</strong> para casos complexos. Custo Argentina: US$ 800-1.200/mês</li>
+            <li><strong>FAQ em espanhol:</strong> reduz tickets em até 40%</li>
+            <li><strong>Horário comercial:</strong> 8h-18h horário local do país-alvo</li>
+        </ul>
+
+        <h4>Fase 2: crescimento (6+ meses)</h4>
+        <ul>
+            <li><strong>2-3 atendentes:</strong> cobertura mais ampla e especializada</li>
+            <li><strong>Knowledge base completa:</strong> em espanhol com busca otimizada</li>
+            <li><strong>WhatsApp Business:</strong> canal preferido em LATAM (usado por 89% das empresas)</li>
+            <li><strong>SLA definido:</strong> resposta em até 4h (tickets) e 24h (e-mails)</li>
+        </ul>
+
+        <div class="info-box">
+            <h4>💡 Onde contratar atendentes</h4>
+            <p><strong>Argentina:</strong> profissionais qualificados por US$ 800-1.200/mês (vs. R$ 3.500-5.000 no Brasil). Use plataformas: Bumeran, Computrabajo, LinkedIn. <strong>Paraguai:</strong> alternativa ainda mais econômica (US$ 600-900/mês) com boa qualidade.</p>
+        </div>
+
+        <h3>Ferramentas essenciais</h3>
+        
+        <ul>
+            <li><strong>CRM:</strong> HubSpot (gratuito) ou Pipedrive (US$ 14/mês) com campos customizados para mercado hispano</li>
+            <li><strong>Help desk:</strong> Zendesk (US$ 49/mês) ou Freshdesk (US$ 15/mês) com suporte em espanhol</li>
+            <li><strong>Chatbot:</strong> Tidio (US$ 18/mês), ManyChat (US$ 15/mês) ou custom com ChatGPT API</li>
+            <li><strong>WhatsApp Business API:</strong> essencial - 89% das empresas LATAM usam para vendas</li>
+            <li><strong>E-mail marketing:</strong> Mailchimp (grátis até 500 contatos) ou SendGrid</li>
+        </ul>
+
+        <div class="section-divider"></div>
+
+        <h1>6. Marketing digital otimizado (semanas 11-12)</h1>
+        
+        <h2>Semana 11: criação de conteúdo cultural</h2>
+        
+        <p><strong>A regra de ouro:</strong> não traduza, crie do zero. Traduções soam artificiais e destroem credibilidade.</p>
+
+        <h3>Website e landing pages</h3>
+        
+        <h4>Elementos obrigatórios</h4>
+        <ul>
+            <li><strong>Domínio local:</strong> .com.ar, .com.mx, .cl conforme país (aumenta confiança em 34%)</li>
+            <li><strong>Preços em moeda local:</strong> exiba em ARS, MXN, CLP, não em USD ou BRL</li>
+            <li><strong>Provas sociais locais:</strong> depoimentos de clientes do país-alvo</li>
+            <li><strong>Métodos de pagamento locais:</strong> exiba logos visíveis (Mercado Pago, OXXO, etc.)</li>
+            <li><strong>Garantias claras:</strong> hispanos valorizam segurança - destaque garantias de reembolso</li>
+        </ul>
+
+        <div class="page-footer">
+            <span>RedattoLAB - Expansão hispana em 90 dias</span>
+            <span>Página 9</span>
+        </div>
+    </div>
+
+    <!-- PÁGINA 10: ESTRATÉGIA DE CONTEÚDO -->
+    <div class="page">
+        <h2>Estratégia de conteúdo para redes sociais</h2>
+        
+        <h3>Plataformas prioritárias por país</h3>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>País</th>
+                    <th>Plataforma #1</th>
+                    <th>Plataforma #2</th>
+                    <th>Frequência ideal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Argentina</strong></td>
+                    <td>Instagram (72%)</td>
+                    <td>LinkedIn (B2B)</td>
+                    <td>5-7 posts/semana</td>
+                </tr>
+                <tr>
+                    <td><strong>México</strong></td>
+                    <td>Facebook (89%)</td>
+                    <td>Instagram (71%)</td>
+                    <td>3-5 posts/semana</td>
+                </tr>
+                <tr>
+                    <td><strong>Chile</strong></td>
+                    <td>Instagram (68%)</td>
+                    <td>LinkedIn (B2B)</td>
+                    <td>4-6 posts/semana</td>
+                </tr>
+                <tr>
+                    <td><strong>Colômbia</strong></td>
+                    <td>Facebook (87%)</td>
+                    <td>Instagram (73%)</td>
+                    <td>5-7 posts/semana</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Tipos de conteúdo que convertem</h3>
+        <ul>
+            <li><strong>Estudos de caso:</strong> hispanos valorizam provas concretas - mostre resultados numéricos</li>
+            <li><strong>Tutoriais em vídeo:</strong> formato preferido, especialmente entre 25-45 anos</li>
+            <li><strong>Lives e webinars:</strong> geram 3x mais engajamento que posts estáticos</li>
+            <li><strong>Infográficos:</strong> alto compartilhamento - dados visuais performam bem</li>
+            <li><strong>Depoimentos em vídeo:</strong> autenticidade é crucial - clientes reais geram confiança</li>
+        </ul>
+
+        <h2>Semana 12: tráfego pago e aquisição</h2>
+        
+        <p>O tráfego pago é o acelerador mais rápido para validação de mercado e geração de leads qualificados.</p>
+
+        <h3>Google Ads: estratégia para LATAM</h3>
+        
+        <h4>Budget inicial recomendado</h4>
+        <ul>
+            <li><strong>Teste (mês 1):</strong> US$ 500-1.000 para validar palavras-chave e audiências</li>
+            <li><strong>Escala (mês 2-3):</strong> US$ 2.000-5.000 focando em campanhas vencedoras</li>
+            <li><strong>Crescimento (mês 4+):</strong> US$ 5.000-15.000 com otimização contínua</li>
+        </ul>
+
+        <h4>Estrutura de campanha</h4>
+        <ul>
+            <li><strong>Campanha 1 - marca:</strong> termos com seu nome de empresa (CPC baixo, alta conversão)</li>
+            <li><strong>Campanha 2 - concorrentes:</strong> nomes de competidores (CPC alto, vale a pena)</li>
+            <li><strong>Campanha 3 - genéricos:</strong> termos da categoria (CPC médio, volume alto)</li>
+            <li><strong>Campanha 4 - long-tail:</strong> termos específicos (CPC baixo, intenção clara)</li>
+        </ul>
+
+        <div class="info-box">
+            <h4>💡 CPC médio por país</h4>
+            <p><strong>Argentina:</strong> US$ 0,15-0,40 | <strong>México:</strong> US$ 0,25-0,60 | <strong>Chile:</strong> US$ 0,30-0,70 | <strong>Colômbia:</strong> US$ 0,20-0,50. CPCs são 40-60% menores que Brasil e 70-80% menores que EUA.</p>
+        </div>
+
+        <div class="page-footer">
+            <span>RedattoLAB - Expansão hispana em 90 dias</span>
+            <span>Página 10</span>
+        </div>
+    </div>
+
+    <!-- PÁGINA 11: META ADS E LANÇAMENTO -->
+    <div class="page">
+        <h3>Meta Ads (Facebook/Instagram): máquina de leads</h3>
+        
+        <h4>Estratégia de campanha</h4>
+        <ul>
+            <li><strong>Topo de funil:</strong> vídeos curtos (15-30s) com proposta de valor clara</li>
+            <li><strong>Meio de funil:</strong> carousel com casos de uso ou benefícios específicos</li>
+            <li><strong>Fundo de funil:</strong> depoimentos em vídeo + oferta clara (trial, demo, desconto)</li>
+            <li><strong>Remarketing:</strong> impacte quem visitou site mas não converteu (30-40% das conversões)</li>
+        </ul>
+
+        <div class="section-divider"></div>
+
+        <h1>7. Lançamento e escala (semana 13 em diante)</h1>
+        
+        <h2>Semana 13: soft launch</h2>
+        
+        <p>O lançamento suave permite testar operação, corrigir falhas e validar hipóteses antes de investir pesado.</p>
+
+        <h3>Checklist do soft launch</h3>
+        
+        <div class="checklist">
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span>Website/landing page em espanhol nativo publicada e testada</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span>Processador de pagamento integrado e testado com transação real</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span>Atendimento em espanhol disponível (chatbot + humano)</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span>Campanhas de tráfego pago configuradas e aprovadas</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span>E-mails automáticos de boas-vindas e onboarding em espanhol</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span>FAQ e knowledge base em espanhol publicados</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span>Redes sociais ativas com pelo menos 15-20 posts publicados</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span>Ferramentas de analytics instaladas (GA4, Meta Pixel, etc.)</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span>Processo de onboarding de clientes documentado e testado</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span>Backups e contingências operacionais estabelecidos</span>
+            </div>
+        </div>
+
+        <h3>Métricas para validação (primeiras 2-4 semanas)</h3>
+        <ul>
+            <li><strong>CAC (custo de aquisição):</strong> meta inicial: US$ 50-200 dependendo do ticket</li>
+            <li><strong>Taxa de conversão:</strong> landing page: 2-5% | tráfego pago para lead: 3-8%</li>
+            <li><strong>Ticket médio:</strong> compare com expectativa inicial (ajuste pricing se necessário)</li>
+            <li><strong>Taxa de churn (cancelamento):</strong> meta: <5% nos primeiros 3 meses</li>
+            <li><strong>LTV/CAC ratio:</strong> meta: >3:1 (para cada US$ 1 de CAC, gerar US$ 3+ de LTV)</li>
+        </ul>
+
+        <div class="page-footer">
+            <span>RedattoLAB - Expansão hispana em 90 dias</span>
+            <span>Página 11</span>
+        </div>
+    </div>
+
+    <!-- PÁGINA 12: OTIMIZAÇÃO E NICHOS -->
+    <div class="page">
+        <div class="info-box">
+            <h4>💡 Quando pivotar vs. persistir</h4>
+            <p><strong>Pivotar se:</strong> CAC >50% do ticket médio após 4 semanas, taxa de conversão <1%, churn >15%. <strong>Persistir se:</strong> métricas no range esperado mas volume baixo - problema é distribuição, não produto.</p>
+        </div>
+
+        <h2>Mês 4-6: otimização e escala</h2>
+        
+        <h3>Otimização de conversão</h3>
+        <ul>
+            <li><strong>A/B testing:</strong> teste headlines, CTAs, imagens, preços (1 teste por semana)</li>
+            <li><strong>Análise de gravações:</strong> use Hotjar ou Clarity para entender comportamento no site</li>
+            <li><strong>Otimização de checkout:</strong> reduza fricção - cada campo extra reduz conversão em 10-15%</li>
+            <li><strong>Remarketing intensivo:</strong> 70% dos visitantes não convertem na primeira visita</li>
+        </ul>
+
+        <h3>Expansão de canais</h3>
+        <p>Após validar 1-2 canais principais, expanda progressivamente:</p>
+        <ul>
+            <li><strong>LinkedIn Ads:</strong> excelente para B2B (CPL: US$ 15-40)</li>
+            <li><strong>YouTube Ads:</strong> vídeos in-stream com CPV US$ 0,03-0,10</li>
+            <li><strong>Parcerias estratégicas:</strong> afiliados, co-marketing, integrações</li>
+            <li><strong>SEO local:</strong> conteúdo em espanhol otimizado (ROI longo mas sustentável)</li>
+        </ul>
+
+        <div class="section-divider"></div>
+
+        <h1>8. Nichos de alto potencial no mercado hispano</h1>
+        
+        <p>Alguns setores apresentam oportunidades excepcionais no mercado hispano devido a gaps de mercado, crescimento acelerado ou vantagens competitivas brasileiras.</p>
+
+        <div class="niche-section">
+            <h2><span class="niche-icon">🏛️</span>1. Advogados de imigração</h2>
+            
+            <h3>Oportunidade</h3>
+            <p>O Brasil recebeu <strong>43 mil imigrantes hispanos em 2023</strong>, principalmente argentinos, venezuelanos e uruguaios. Esses profissionais buscam assessoria para cidadania europeia, vistos de residência e naturalização.</p>
+            
+            <h3>Potencial financeiro</h3>
+            <ul>
+                <li><strong>Ticket médio:</strong> R$ 30.000-150.000 por caso</li>
+                <li><strong>CAC:</strong> R$ 800-2.500 via tráfego pago</li>
+                <li><strong>ROI:</strong> 12-50x dependendo do serviço</li>
+                <li><strong>Payback:</strong> 1-2 clientes pagam todo investimento em marketing</li>
+            </ul>
+
+            <h3>Estratégia recomendada</h3>
+            <ul>
+                <li>Google Ads com palavras-chave: "ciudadanía portuguesa", "visa Brasil", "abogado inmigración Brasil"</li>
+                <li>Conteúdo no YouTube explicando processos (hispanos preferem vídeo)</li>
+                <li>Parcerias com despachantes e tradutores na Argentina/Uruguai</li>
+            </ul>
+        </div>
+
+        <div class="page-footer">
+            <span>RedattoLAB - Expansão hispana em 90 dias</span>
+            <span>Página 12</span>
+        </div>
+    </div>
+
+    <!-- PÁGINA 13: MAIS NICHOS -->
+    <div class="page">
+        <div class="niche-section">
+            <h2><span class="niche-icon">💉</span>2. Clínicas de cirurgia plástica e estética</h2>
+            
+            <h3>Oportunidade</h3>
+            <p>O <strong>turismo médico</strong> para o Brasil cresceu 127% desde 2020. Argentinos, uruguaios e chilenos procuram procedimentos estéticos no Brasil por qualidade técnica superior e custo 30-50% menor.</p>
+            
+            <h3>Potencial financeiro</h3>
+            <ul>
+                <li><strong>Ticket médio:</strong> R$ 15.000-60.000 por procedimento</li>
+                <li><strong>CAC:</strong> R$ 1.200-4.000</li>
+                <li><strong>ROI:</strong> 4-15x</li>
+                <li><strong>Volume:</strong> clínicas reportam 20-40% de pacientes internacionais</li>
+            </ul>
+            
+            <h3>Estratégia recomendada</h3>
+            <ul>
+                <li>Instagram com antes/depois (com autorização) + depoimentos em espanhol</li>
+                <li>Meta Ads segmentado para Argentina/Chile/Uruguai: mulheres 28-55 anos</li>
+                <li>Parcerias com hotéis para pacotes completos (cirurgia + hospedagem)</li>
+            </ul>
+        </div>
+
+        <div class="niche-section">
+            <h2><span class="niche-icon">💻</span>3. SaaS e software</h2>
+            
+            <h3>Oportunidade</h3>
+            <p>Mercado SaaS LATAM crescendo <strong>23% ao ano</strong> até 2027. Empresas hispanas buscam alternativas aos softwares americanos caros, valorizando suporte em espanhol e preços competitivos.</p>
+            
+            <h3>Nichos quentes</h3>
+            <ul>
+                <li><strong>ERP para PMEs:</strong> gap gigante - soluções americanas são complexas/caras</li>
+                <li><strong>CRM em espanhol:</strong> HubSpot/Salesforce negligenciam mercado hispano</li>
+                <li><strong>E-commerce:</strong> integração com Mercado Pago, OXXO, etc.</li>
+                <li><strong>Fintechs:</strong> soluções de pagamento, gestão financeira, contabilidade</li>
+            </ul>
+        </div>
+
+        <div class="niche-section">
+            <h2><span class="niche-icon">🏢</span>4. Mercado imobiliário</h2>
+            
+            <h3>Oportunidade</h3>
+            <p><strong>Uruguai investiu R$ 283,2 milhões</strong> em imóveis brasileiros. Argentinos, paraguaios e chilenos buscam imóveis no Brasil para investimento, moradia e proteção patrimonial.</p>
+            
+            <h3>Potencial financeiro</h3>
+            <ul>
+                <li><strong>Comissão média:</strong> 5-8% sobre vendas de R$ 500k-2M+</li>
+                <li><strong>CAC:</strong> R$ 300-1.500 por lead qualificado</li>
+                <li><strong>Ticket médio comissão:</strong> R$ 25.000-160.000</li>
+            </ul>
+        </div>
+
+        <div class="page-footer">
+            <span>RedattoLAB - Expansão hispana em 90 dias</span>
+            <span>Página 13</span>
+        </div>
+    </div>
+
+    <!-- PÁGINA 14: NICHOS FINAIS -->
+    <div class="page">
+        <div class="niche-section">
+            <h2><span class="niche-icon">📚</span>5. Infoprodutos e educação</h2>
+            
+            <h3>Oportunidade</h3>
+            <p>Mercado de <strong>educação online</strong> hispano cresce 28% ao ano. Cursos, mentorias e MBAs brasileiros têm credibilidade e podem replicar faturamento com baixa concorrência.</p>
+            
+            <h3>Nichos com demanda</h3>
+            <ul>
+                <li><strong>Marketing digital:</strong> hispanos buscam estratégias validadas</li>
+                <li><strong>Vendas B2B:</strong> metodologias brasileiras (SPIN, BANT) são referência</li>
+                <li><strong>Desenvolvimento pessoal:</strong> coaching, PNL, liderança</li>
+                <li><strong>Tecnologia:</strong> programação, dados, IA</li>
+            </ul>
+            
+            <h3>Estratégia recomendada</h3>
+            <ul>
+                <li>Webinars gratuitos em espanhol (funil comprovado)</li>
+                <li>Parcerias com influencers hispanos do nicho</li>
+                <li>Precificação: 20-30% abaixo do preço Brasil inicial</li>
+            </ul>
+        </div>
+
+        <div class="niche-section">
+            <h2><span class="niche-icon">💳</span>6. Fintechs e serviços financeiros</h2>
+            
+            <h3>Oportunidade</h3>
+            <p>Crescimento econômico na Argentina (5,5%) e Paraguai (4%) cria demanda por <strong>soluções financeiras cross-border</strong>: pagamentos, câmbio, investimentos, banking digital.</p>
+            
+            <h3>Casos de uso</h3>
+            <ul>
+                <li><strong>Remessas:</strong> brasileiros enviando para família na LATAM</li>
+                <li><strong>Câmbio:</strong> empresas importando/exportando</li>
+                <li><strong>Investimentos:</strong> hispanos querendo diversificar em Brasil</li>
+                <li><strong>Banking:</strong> contas digitais para estrangeiros</li>
+            </ul>
+        </div>
+
+        <div class="page-footer">
+            <span>RedattoLAB - Expansão hispana em 90 dias</span>
+            <span>Página 14</span>
+        </div>
+    </div>
+
+    <!-- PÁGINA 15: CHECKLIST COMPLETO -->
+    <div class="page">
+        <h1>9. Checklist completo dos 90 dias</h1>
+        
+        <p>Este checklist consolida todas as ações necessárias para sua expansão bem-sucedida ao mercado hispano. Use-o como guia de execução e acompanhamento.</p>
+
+        <h2>Semanas 1-4: preparação estratégica</h2>
+        
+        <div class="checklist">
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Semana 1:</strong> Análise de mercado - pesquisar dados econômicos, concorrentes e regulamentações dos países-alvo</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Semana 1:</strong> Definir 1-2 países prioritários com base em potencial, afinidade cultural e viabilidade operacional</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Semana 2:</strong> Criar personas hispanas específicas (não traduzir brasileiras) considerando diferenças culturais</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Semana 2:</strong> Documentar jornada de compra local e processos de decisão por país</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Semana 3:</strong> Mapear 3-5 principais concorrentes locais e analisar estratégias de pricing e posicionamento</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Semana 3:</strong> Avaliar presença digital dos concorrentes e identificar gaps de mercado</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Semana 4:</strong> Definir proposta de valor única para o mercado hispano</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Semana 4:</strong> Estabelecer estratégia de precificação (considerar 20-30% abaixo do Brasil inicialmente)</span>
+            </div>
+        </div>
+
+        <h2>Semanas 5-8: estruturação legal e tributária</h2>
+        
+        <div class="checklist">
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Semana 5:</strong> Decidir modelo de operação (venda remota, empresa local ou parceiro)</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Semana 5:</strong> Consultar advogado local sobre viabilidade e requisitos legais</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Semana 6:</strong> Estruturar modelo tributário e calcular impostos por país-alvo</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Semana 6:</strong> Definir estrutura de compliance e obrigações fiscais</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Semana 7:</strong> Registrar marca nos países prioritários (investimento: US$ 300-800 por país)</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Semana 8:</strong> Preparar contratos: termos de serviço, política de privacidade, SLA e política de reembolso</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Semana 8:</strong> Revisar documentos com advogado local e fazer ajustes necessários</span>
+            </div>
+        </div>
+
+        <div class="page-footer">
+            <span>RedattoLAB - Expansão hispana em 90 dias</span>
+            <span>Página 15</span>
+        </div>
+    </div>
+
+    <!-- PÁGINA 16: CHECKLIST CONTINUAÇÃO -->
+    <div class="page">
+        <h2>Semanas 9-10: infraestrutura financeira e operacional</h2>
+        
+        <div class="checklist">
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Semana 9:</strong> Integrar processador de pagamento (EBANX, Mercado Pago ou Stripe)</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Semana 9:</strong> Configurar métodos de pagamento locais (carteiras digitais, OXXO, PSE, etc.)</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Semana 9:</strong> Testar fluxo completo de pagamento com transações reais</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Semana 10:</strong> Contratar ou treinar atendente bilíngue (custo Argentina: US$ 800-1.200/mês)</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Semana 10:</strong> Implementar chatbot IA em espanhol (Tidio, ManyChat ou custom)</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Semana 10:</strong> Criar FAQ completo em espanhol nativo</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Semana 10:</strong> Configurar CRM e help desk com campos customizados para mercado hispano</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Semana 10:</strong> Estabelecer SLA de atendimento (meta: resposta em 4h para tickets)</span>
+            </div>
+        </div>
+
+        <h2>Semanas 11-12: marketing digital otimizado</h2>
+        
+        <div class="checklist">
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Semana 11:</strong> Criar website/landing pages em espanhol nativo (não traduzido)</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Semana 11:</strong> Registrar domínio local (.com.ar, .com.mx, .cl conforme país)</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Semana 11:</strong> Produzir 15-20 posts para redes sociais em espanhol</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Semana 11:</strong> Criar conteúdo: estudos de caso, tutoriais em vídeo, depoimentos</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Semana 12:</strong> Configurar campanhas Google Ads (budget inicial: US$ 500-1.000)</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Semana 12:</strong> Configurar campanhas Meta Ads (Facebook/Instagram)</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Semana 12:</strong> Instalar pixels de rastreamento (Meta, Google, Analytics)</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Semana 12:</strong> Configurar e-mails automáticos de boas-vindas e onboarding</span>
+            </div>
+        </div>
+
+        <div class="page-footer">
+            <span>RedattoLAB - Expansão hispana em 90 dias</span>
+            <span>Página 16</span>
+        </div>
+    </div>
+
+    <!-- PÁGINA 17: CHECKLIST LANÇAMENTO -->
+    <div class="page">
+        <h2>Semana 13+: lançamento e escala</h2>
+        
+        <div class="checklist">
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Semana 13:</strong> Realizar soft launch com checklist de validação completo</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Semana 13:</strong> Monitorar métricas diárias: CAC, taxa de conversão, ticket médio</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Semanas 14-16:</strong> Ajustar campanhas com base em dados reais (A/B testing)</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Semanas 14-16:</strong> Coletar feedback de primeiros clientes e otimizar onboarding</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Mês 4:</strong> Escalar budget de tráfego pago se métricas validarem viabilidade</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Mês 4-6:</strong> Expandir canais (LinkedIn Ads, YouTube Ads, parcerias)</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Mês 4-6:</strong> Construir pipeline de SEO local com conteúdo em espanhol</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span><strong>Mês 6+:</strong> Avaliar expansão para segundo país ou vertical adicional</span>
+            </div>
+        </div>
+
+        <h2>Métricas de sucesso para acompanhar</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Métrica</th>
+                    <th>Meta inicial</th>
+                    <th>Meta 6 meses</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>CAC (custo de aquisição)</td>
+                    <td>US$ 50-200</td>
+                    <td>US$ 30-150</td>
+                </tr>
+                <tr>
+                    <td>Taxa conversão landing page</td>
+                    <td>2-5%</td>
+                    <td>5-8%</td>
+                </tr>
+                <tr>
+                    <td>Taxa conversão lead → cliente</td>
+                    <td>3-8%</td>
+                    <td>10-15%</td>
+                </tr>
+                <tr>
+                    <td>Churn mensal</td>
+                    <td><5%</td>
+                    <td><3%</td>
+                </tr>
+                <tr>
+                    <td>LTV/CAC ratio</td>
+                    <td>>3:1</td>
+                    <td>>5:1</td>
+                </tr>
+                <tr>
+                    <td>Ticket médio</td>
+                    <td>Conforme nicho</td>
+                    <td>+20-30%</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="info-box">
+            <h4>💡 Dica final</h4>
+            <p>A execução disciplinada deste plano de 90 dias é mais importante que a perfeição. Comece, aprenda rápido, ajuste conforme necessário. O mercado hispano recompensa empresas que demonstram comprometimento genuíno com qualidade e relacionamento de longo prazo.</p>
+        </div>
+
+        <div class="page-footer">
+            <span>RedattoLAB - Expansão hispana em 90 dias</span>
+            <span>Página 17</span>
+        </div>
+    </div>
+
+    <!-- PÁGINA 18: FONTES E REFERÊNCIAS -->
+    <div class="page">
+        <h1>10. Fontes e referências</h1>
+        
+        <p>Este guia foi desenvolvido com base em dados e pesquisas de fontes confiáveis e atualizadas. Todas as estatísticas e projeções citadas ao longo do documento provêm das seguintes referências:</p>
+
+        <h2>Mercado SaaS e tecnologia</h2>
+        
+        <div style="font-size: 8.5pt; line-height: 1.4; margin-bottom: 8px;">
+            <strong>EBANX & PCMI (2024):</strong> "Latin America SaaS Market Report 2024-2027" - Projeção de crescimento de US$ 22B para US$ 46B até 2027 com taxa de 23% ao ano
+        </div>
+
+        <div style="font-size: 8.5pt; line-height: 1.4; margin-bottom: 8px;">
+            <strong>IDC Brasil (2024):</strong> "Brazil IT Market Forecast 2025" - Brasil representa 34,7% dos investimentos em TI na América Latina (US$ 102,7B regionais em 2025)
+        </div>
+
+        <div style="font-size: 8.5pt; line-height: 1.4; margin-bottom: 8px;">
+            <strong>EBANX (2024):</strong> "Beyond Borders 2024" - Pix representa 61% da receita de empresas SaaS no Brasil
+        </div>
+
+        <h2>Crescimento econômico</h2>
+        
+        <div style="font-size: 8.5pt; line-height: 1.4; margin-bottom: 8px;">
+            <strong>FMI - World Economic Outlook (outubro 2024):</strong> Argentina projetada para crescer 5,5% do PIB em 2025, segunda maior taxa entre as 25 principais economias
+        </div>
+
+        <div style="font-size: 8.5pt; line-height: 1.4; margin-bottom: 8px;">
+            <strong>Banco Mundial (2024):</strong> "Paraguay Economic Update" - Projeção de crescimento de 4% do PIB para 2025
+        </div>
+
+        <div style="font-size: 8.5pt; line-height: 1.4; margin-bottom: 8px;">
+            <strong>FocusEconomics (2024):</strong> Consenso de analistas aponta Brasil com crescimento de 2,2% em 2025
+        </div>
+
+        <h2>Pagamentos digitais</h2>
+        
+        <div style="font-size: 8.5pt; line-height: 1.4; margin-bottom: 8px;">
+            <strong>FIS Global Payments Report (2024):</strong> Carteiras digitais crescendo de 25% (2024) para 39% (2030) do mercado LATAM
+        </div>
+
+        <div style="font-size: 8.5pt; line-height: 1.4; margin-bottom: 8px;">
+            <strong>Worldpay from FIS (2024):</strong> "The Global Payments Report" - 4,5 bilhões de usuários de carteiras digitais globalmente, projetando 6 bilhões até 2030
+        </div>
+
+        <div style="font-size: 8.5pt; line-height: 1.4; margin-bottom: 8px;">
+            <strong>Mercado Pago (2024):</strong> Relatório anual indicando 78,5 milhões de usuários ativos
+        </div>
+
+        <div style="font-size: 8.5pt; line-height: 1.4; margin-bottom: 8px;">
+            <strong>Nequi Colômbia (2024):</strong> Dados corporativos apontam 54% de penetração entre adultos colombianos
+        </div>
+
+        <div class="page-footer">
+            <span>RedattoLAB - Expansão hispana em 90 dias</span>
+            <span>Página 18</span>
+        </div>
+<h2>Investimento estrangeiro</h2>
+        
+        <div style="font-size: 8.5pt; line-height: 1.4; margin-bottom: 8px;">
+            <strong>Banco Central do Brasil (2023):</strong> Relatório de Investimento Estrangeiro Direto - R$ 283,2 milhões investidos por uruguaios em imóveis brasileiros
+        </div>
+
+        <div style="font-size: 8.5pt; line-height: 1.4; margin-bottom: 8px;">
+            <strong>Rediex Paraguay (2024):</strong> US$ 9,63 bilhões em investimento estrangeiro direto em 2024, crescimento de 4,1% vs. 2023
+        </div>
+
+        <div style="font-size: 8.5pt; line-height: 1.4; margin-bottom: 8px;">
+            <strong>IBGE (2023):</strong> Registro de 43.000 imigrantes hispanos no Brasil durante o ano
+        </div>
+<h2>Tecnologia e conectividade</h2>
+        
+        <div style="font-size: 8.5pt; line-height: 1.4; margin-bottom: 8px;">
+            <strong>We Are Social & Meltwater (2024):</strong> "Digital 2024" - Dados de penetração de redes sociais por país LATAM
+        </div>
+
+        <div style="font-size: 8.5pt; line-height: 1.4; margin-bottom: 8px;">
+            <strong>Statista (2024):</strong> "E-commerce Market Outlook" - Mercados digitais por país: México US$ 125,7B, Colômbia US$ 61,4B, Chile US$ 39,1B
+        </div>
+
+        <div style="font-size: 8.5pt; line-height: 1.4; margin-bottom: 8px;">
+            <strong>GSMA Intelligence (2024):</strong> Relatório de adoção mobile na América Latina
+        </div>
+    </div>
+
+    <!-- PÁGINA 19: FONTES CONTINUAÇÃO -->
+    <div class="page">
+            
+        <h2>Tributação e regulamentação</h2>
+        
+        <div style="font-size: 8.5pt; line-height: 1.4; margin-bottom: 8px;">
+            <strong>Banco Mundial - Doing Business (2024):</strong> Rankings de facilidade de fazer negócios por país
+        </div>
+
+        <div style="font-size: 8.5pt; line-height: 1.4; margin-bottom: 8px;">
+            <strong>PwC (2024):</strong> "Worldwide Tax Summaries" - Alíquotas de impostos corporativos e IVA por país
+        </div>
+
+        <div style="font-size: 8.5pt; line-height: 1.4; margin-bottom: 8px;">
+            <strong>SET Paraguay (2024):</strong> Sistema tributário "10-10-10" oficialmente documentado
+        </div>
+
+        <h2>Dados complementares</h2>
+        
+        <div style="font-size: 8.5pt; line-height: 1.4; margin-bottom: 8px;">
+            <strong>Instituto Cervantes (2024):</strong> "El español en el mundo 2024" - 400 milhões de hispanofalantes nativos
+        </div>
+
+        <div style="font-size: 8.5pt; line-height: 1.4; margin-bottom: 8px;">
+            <strong>Meta for Business (2024):</strong> "WhatsApp Business Report LATAM" - 89% das empresas latino-americanas usam WhatsApp Business para vendas
+        </div>
+
+        <div class="page-footer">
+            <span>RedattoLAB - Expansão hispana em 90 dias</span>
+            <span>Página 19</span>
+        </div>
+    </div>
+
+    <!-- PÁGINA 20: CONSIDERAÇÕES FINAIS -->
+    <div class="page">
+        <h2>Considerações finais</h2>
+        
+        <div style="font-size: 9.5pt; line-height: 1.6; margin-top: 15px;">
+            <p>Este guia foi elaborado pela <strong>RedattoLAB</strong> com o objetivo de fornecer uma visão estratégica abrangente sobre as oportunidades no mercado hispano. As informações apresentadas foram compiladas de fontes oficiais e relatórios de mercado confiáveis.</p>
+            
+            <p style="margin-top: 12px;"><strong>Importante:</strong> Cada empresa possui suas peculiaridades operacionais, capacidades financeiras e objetivos estratégicos únicos. Antes de tomar qualquer decisão de expansão internacional, é fundamental realizar um estudo profundo de mercado considerando:</p>
+            
+            <ul style="margin-left: 20px; margin-top: 10px; font-size: 9.5pt;">
+                <li style="margin-bottom: 6px;">A capacidade interna de sua empresa de absorver novas operações e aumentar produção</li>
+                <li style="margin-bottom: 6px;">Os recursos financeiros disponíveis para investimento inicial e sustentação durante o período de maturação</li>
+                <li style="margin-bottom: 6px;">A expertise de sua equipe em lidar com operações internacionais e diferenças culturais</li>
+                <li style="margin-bottom: 6px;">O fit real entre seu produto/serviço e as necessidades específicas do mercado-alvo</li>
+                <li style="margin-bottom: 6px;">As particularidades regulatórias e legais do seu setor em cada país</li>
+                <li style="margin-bottom: 6px;">A estrutura de suporte necessária para garantir qualidade de atendimento em espanhol</li>
+            </ul>
+            
+            <p style="margin-top: 12px;">Recomendamos fortemente a contratação de consultoria especializada em expansão internacional, assessoria jurídica local e contadores familiarizados com a tributação dos países-alvo antes de iniciar operações.</p>
+            
+            <p style="margin-top: 12px;">Os dados apresentados refletem o cenário de mercado geral. Mercados emergentes são dinâmicos e podem apresentar mudanças significativas em períodos curtos conforme o nicho. Mantenha-se atualizado consultando as fontes originais regularmente.</p>
+        </div>
+
+        <div style="margin-top: 25px; padding: 15px; background: linear-gradient(135deg, rgba(125, 211, 192, 0.1), rgba(218, 165, 32, 0.1)); border-radius: 8px; border-left: 4px solid var(--dourado);">
+            <p style="font-size: 10pt; margin: 0; font-weight: 600;">Sobre a RedattoLAB</p>
+            <p style="font-size: 9pt; margin: 8px 0 0 0; line-height: 1.5;">Especializada em copywriting estratégico, marketing de conteúdo e expansão para mercados internacionais, a RedattoLAB auxilia empresas brasileiras de tecnologia, SaaS e alto ticket a conquistarem novos mercados com estratégias baseadas em dados e resultados mensuráveis.</p>
+            <p style="font-size: 9pt; margin: 10px 0 0 0;"><strong>Contato:</strong> www.redattolab.com.br | contato@redattolab.com.br</p>
+        </div>
+
+        <div class="page-footer">
+            <span>RedattoLAB - Expansão hispana em 90 dias</span>
+            <span>Página 20</span>
+        </div>
+    </div>
+
+<!-- CONTRACAPA -->
+    <div class="page cover" style="background: linear-gradient(135deg, #0A1929 0%, #084d6e 50%, #0A1929 100%); position: relative; overflow: hidden;">
+        <!-- Circuito de fundo -->
+        <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.08;" viewBox="0 0 800 1200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Linhas horizontais -->
+            <line x1="0" y1="100" x2="800" y2="100" stroke="#7dd3c0" stroke-width="1"/>
+            <line x1="0" y1="200" x2="800" y2="200" stroke="#7dd3c0" stroke-width="1"/>
+            <line x1="0" y1="300" x2="800" y2="300" stroke="#7dd3c0" stroke-width="1"/>
+            <line x1="0" y1="400" x2="800" y2="400" stroke="#7dd3c0" stroke-width="1"/>
+            <line x1="0" y1="500" x2="800" y2="500" stroke="#7dd3c0" stroke-width="1"/>
+            <line x1="0" y1="600" x2="800" y2="600" stroke="#7dd3c0" stroke-width="1"/>
+            <line x1="0" y1="700" x2="800" y2="700" stroke="#7dd3c0" stroke-width="1"/>
+            <line x1="0" y1="800" x2="800" y2="800" stroke="#7dd3c0" stroke-width="1"/>
+            <line x1="0" y1="900" x2="800" y2="900" stroke="#7dd3c0" stroke-width="1"/>
+            <line x1="0" y1="1000" x2="800" y2="1000" stroke="#7dd3c0" stroke-width="1"/>
+            <line x1="0" y1="1100" x2="800" y2="1100" stroke="#7dd3c0" stroke-width="1"/>
+            
+            <!-- Linhas verticais -->
+            <line x1="100" y1="0" x2="100" y2="1200" stroke="#7dd3c0" stroke-width="1"/>
+            <line x1="200" y1="0" x2="200" y2="1200" stroke="#7dd3c0" stroke-width="1"/>
+            <line x1="300" y1="0" x2="300" y2="1200" stroke="#7dd3c0" stroke-width="1"/>
+            <line x1="400" y1="0" x2="400" y2="1200" stroke="#7dd3c0" stroke-width="1"/>
+            <line x1="500" y1="0" x2="500" y2="1200" stroke="#7dd3c0" stroke-width="1"/>
+            <line x1="600" y1="0" x2="600" y2="1200" stroke="#7dd3c0" stroke-width="1"/>
+            <line x1="700" y1="0" x2="700" y2="1200" stroke="#7dd3c0" stroke-width="1"/>
+            
+            <!-- Circuitos eletrônicos -->
+            <circle cx="150" cy="150" r="8" fill="none" stroke="#daa520" stroke-width="2"/>
+            <circle cx="150" cy="150" r="3" fill="#daa520"/>
+            <line x1="150" y1="150" x2="250" y2="150" stroke="#daa520" stroke-width="2"/>
+            <circle cx="250" cy="150" r="8" fill="none" stroke="#daa520" stroke-width="2"/>
+            <circle cx="250" cy="150" r="3" fill="#daa520"/>
+            
+            <circle cx="650" cy="250" r="8" fill="none" stroke="#daa520" stroke-width="2"/>
+            <circle cx="650" cy="250" r="3" fill="#daa520"/>
+            <line x1="650" y1="250" x2="650" y2="350" stroke="#daa520" stroke-width="2"/>
+            <circle cx="650" cy="350" r="8" fill="none" stroke="#daa520" stroke-width="2"/>
+            <circle cx="650" cy="350" r="3" fill="#daa520"/>
+            
+            <circle cx="350" cy="450" r="8" fill="none" stroke="#daa520" stroke-width="2"/>
+            <circle cx="350" cy="450" r="3" fill="#daa520"/>
+            <line x1="350" y1="450" x2="500" y2="450" stroke="#daa520" stroke-width="2"/>
+            <circle cx="500" cy="450" r="8" fill="none" stroke="#daa520" stroke-width="2"/>
+            <circle cx="500" cy="450" r="3" fill="#daa520"/>
+            
+            <circle cx="200" cy="650" r="8" fill="none" stroke="#daa520" stroke-width="2"/>
+            <circle cx="200" cy="650" r="3" fill="#daa520"/>
+            <line x1="200" y1="650" x2="200" y2="750" stroke="#daa520" stroke-width="2"/>
+            <circle cx="200" cy="750" r="8" fill="none" stroke="#daa520" stroke-width="2"/>
+            <circle cx="200" cy="750" r="3" fill="#daa520"/>
+            
+            <circle cx="550" cy="850" r="8" fill="none" stroke="#daa520" stroke-width="2"/>
+            <circle cx="550" cy="850" r="3" fill="#daa520"/>
+            <line x1="550" y1="850" x2="650" y2="850" stroke="#daa520" stroke-width="2"/>
+            <circle cx="650" cy="850" r="8" fill="none" stroke="#daa520" stroke-width="2"/>
+            <circle cx="650" cy="850" r="3" fill="#daa520"/>
+            
+            <!-- Nós adicionais -->
+            <circle cx="400" cy="200" r="5" fill="#7dd3c0" opacity="0.6"/>
+            <circle cx="300" cy="550" r="5" fill="#7dd3c0" opacity="0.6"/>
+            <circle cx="600" cy="700" r="5" fill="#7dd3c0" opacity="0.6"/>
+            <circle cx="150" cy="950" r="5" fill="#7dd3c0" opacity="0.6"/>
+        </svg>
+
+        <!-- Gradiente overlay -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at center, transparent 0%, rgba(10, 25, 41, 0.4) 100%);"></div>
+
+        <!-- Conteúdo -->
+        <div style="position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+            
+            <!-- Logo centralizada -->
+            <div style="flex: 1; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                <div style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border-radius: 20px; padding: 40px 50px; border: 2px solid rgba(218, 165, 32, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);">
+                    <img src="https://i.ibb.co/jPWZ01JV/Redatto-LAB-400-x-150-px.png" alt="RedattoLAB" style="width: 280px; height: auto; display: block;">
+                </div>
+                
+                <div style="margin-top: 40px; text-align: center; max-width: 500px;">
+                    <p style="font-size: 13pt; color: var(--verde-agua); line-height: 1.6; font-weight: 300;">
+                        Transformando empresas brasileiras em players internacionais através de estratégias baseadas em dados e execução impecável
+                    </p>
+                </div>
+            </div>
+
+            <!-- Informações de contato e serviços -->
+            <div style="background: rgba(0, 0, 0, 0.3); backdrop-filter: blur(10px); padding: 30px; border-radius: 15px; border: 1px solid rgba(218, 165, 32, 0.2);">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 25px;">
+                    <div>
+                        <h3 style="color: var(--dourado); font-size: 11pt; margin-bottom: 10px; font-family: 'Playfair Display', serif;">Nossos serviços</h3>
+                        <ul style="list-style: none; padding: 0; margin: 0; font-size: 9pt; color: var(--areia); line-height: 1.8;">
+                            <li style="margin-bottom: 5px;">→ Expansão internacional</li>
+                            <li style="margin-bottom: 5px;">→ Copywriting estratégico</li>
+                            <li style="margin-bottom: 5px;">→ Marketing de conteúdo</li>
+                            <li style="margin-bottom: 5px;">→ Localização cultural</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 style="color: var(--dourado); font-size: 11pt; margin-bottom: 10px; font-family: 'Playfair Display', serif;">Entre em contato</h3>
+                        <div style="font-size: 9pt; color: var(--areia); line-height: 1.8;">
+                            <p style="margin-bottom: 5px;">🌐 www.redattolab.com.br</p>
+                            <p style="margin-bottom: 5px;">✉️ contato@redattolab.com.br</p>
+                            <p style="margin-bottom: 5px;">📱 https://wa.me/5548999867086</p>
+                            <p style="margin-bottom: 5px;">💼 LinkedIn: /redattolab</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="border-top: 1px solid rgba(218, 165, 32, 0.3); padding-top: 15px; text-align: center;">
+                    <p style="font-size: 8.5pt; color: var(--verde-agua); margin: 0;">
+                        © 2025 RedattoLAB. Todos os direitos reservados. | Material de distribuição gratuita para fins educacionais
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
